@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PMS.DTO.DataObjects
 {
-    class Test
+    public class Test
     {
     }
 }
