@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PMS.Infrastructure.ResultType
+﻿namespace PMS.Interface.Result
 {
     public class Result<T> : IResult<T>
     {
@@ -23,6 +19,11 @@ namespace PMS.Infrastructure.ResultType
 
         public Result(bool IsSuccess, ResultTypeEnum ResultType, string Message, params string[] parameters)
             : this(IsSuccess, string.Empty, ResultType, default(T), Message, parameters)
+        {
+
+        }
+        public Result(T Data, string Message)
+            : this(true, ResultTypeEnum.Information, Data, Message, string.Empty)
         {
 
         }
@@ -60,13 +61,4 @@ namespace PMS.Infrastructure.ResultType
             this.Message = result.Message;
         }
     }
-
-    public enum ResultTypeEnum
-    {
-        None = 0,
-        Information = 1,
-        Success = 2,
-        Warning = 3,
-        Error = 4
-    };
 }

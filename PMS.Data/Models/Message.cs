@@ -10,7 +10,6 @@ namespace PMS.Data.Models
         public DateTime Date { get; set; }
         public int PostUserId { get; set; }
         public int GetUserId { get; set; }
-
         public User GetUser { get; set; }
         public User PostUser { get; set; }
     }

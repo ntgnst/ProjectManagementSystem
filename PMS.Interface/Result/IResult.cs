@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PMS.Infrastructure.ResultType
+namespace PMS.Interface.Result
 {
     public interface IResult<T> : IResult
     {
